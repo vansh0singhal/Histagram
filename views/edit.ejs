@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Posts</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-zinc-950 text-white font-sans">
+  <div class="max-w-4xl mx-auto p-6">
+
+
+    <!-- Post Form -->
+    <div class="bg-zinc-800 p-6 rounded-2xl shadow-lg">
+      <h2 class="text-xl font-semibold mb-2">Edit your post</h2>
+      <form action="/update/<%=post._id%>" method="post" class="space-y-4">
+        <textarea 
+          name="content" 
+          rows="4" 
+          placeholder="What's on your mind?" 
+          class="w-full resize-none bg-zinc-900 border border-zinc-700 rounded-xl p-4 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+        ><%= post.content %></textarea>
+        <input 
+          type="submit" 
+          value="Update Post" 
+          class="bg-yellow-600 hover:bg-yellow-700 transition-colors text-black px-6 py-2 rounded-lg cursor-pointer shadow"
+        >
+      </form>
+    </div>
+
+  </div>
+</body>
+</html>
